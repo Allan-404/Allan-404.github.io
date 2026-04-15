@@ -14,7 +14,8 @@
                     { nome: "Produto 2", preco: 19.99 },
                     { nome: "Produto 3", preco: 5.99 }
                 ];
-                function mostrarProdutos() {
+                function mostrarProdutos() { 
+                    listaProdutos.innerHTML = "";
                     const listaProdutos = document.getElementById("lista-produtos");
                     produtos.forEach(produto => {
                         const item = document.createElement("li");
@@ -25,14 +26,8 @@
                 function adicionarProduto() {
                     const nomeInput = document.getElementById("nome");
                     const precoInput = document.getElementById("preco");
-                    const novoProduto = {
-                    nome: nomeInput.value,
-                    preco: parseFloat(precoInput.value)
-                };
-                limparLista(){
-                    listaProdutos.innerHTML = "";
-                }
-                limparCadastro(){
+                    const novoProduto = {nome:nome preco:preco};
+                    produtos.push(novoProduto);
                     nomeInput.value = "";
                     precoInput.value = "";
                 }
