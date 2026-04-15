@@ -8,36 +8,48 @@
                 <center>
     
                     <h1>Serviços</h1>
-        <script>
-            let produtos = [
-                { nome: "Produto 1", preco: 10.99 },
-                { nome: "Produto 2", preco: 19.99 },
-                { nome: "Produto 3", preco: 5.99 }
-            ];
-            function mostrarProdutos() {
-                const listaProdutos = document.getElementById("lista-produtos");
-                produtos.forEach(produto => {
-                    const item = document.createElement("li");
-                    item.textContent = `${produto.nome} - R$ ${produto.preco.toFixed(2)}`;
-                    listaProdutos.appendChild(item);
-                });
-            }
-
-        </script>
-    </head>
-    <body>
-        <form onsubmit="event.preventDefault(); adicionarProduto();">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome">
-            <label for="preco">Preço:</label>
-            <input type="number" id="preco" name="preco" step="0.01">
-            <button type="submit">Adicionar Produto</button>
-        </form>
-
-        <button onclick="mostrarProdutos()">Mostrar Produtos</button>
-        <h2>Produtos</h2>
-        <ul id="lista-produtos">
-        </ul>
+            <script>
+                let produtos = [
+                    { nome: "Produto 1", preco: 10.99 },
+                    { nome: "Produto 2", preco: 19.99 },
+                    { nome: "Produto 3", preco: 5.99 }
+                ];
+                function mostrarProdutos() {
+                    const listaProdutos = document.getElementById("lista-produtos");
+                    produtos.forEach(produto => {
+                        const item = document.createElement("li");
+                        item.textContent = `${produto.nome} - R$ ${produto.preco.toFixed(2)}`;
+                        listaProdutos.appendChild(item);
+                    });
+                }
+                function adicionarProduto() {
+                    const nomeInput = document.getElementById("nome");
+                    const precoInput = document.getElementById("preco");
+                    const novoProd = {
+                    nome: nomeInput.value,
+                    preco: parseFloat(precoInput.value)
+                };
+                LimparLista(){
+                    listaProdutos.innerHTML = "";
+                }
+                LimparCadastro(){
+                    nomeInput.value = "";
+                    precoInput.value = "";
+                }
+            </script>
+        </head>
+        <body>
+            <form onsubmit="event.preventDefault(); adicionarProduto();">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+                <label for="preco">Preço:</label>
+                <input type="number" id="preco" name="preco" step="0.01">
+                <button type="submit">Adicionar Produto</button>
+            </form>
+            <button onclick="mostrarProdutos(), limparLista()">Mostrar Produtos</button>
+            <h2>Produtos</h2>
+            <ul id="lista-produtos">
+            </ul>
 
                 </center>
                 <br/>
