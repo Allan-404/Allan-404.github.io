@@ -28,7 +28,7 @@ body {
   border-radius: 10px;
   width: 300px;
   text-align: center;
-  margin: 0 auto;S
+  margin: 0 auto;
 }
 
 
@@ -37,18 +37,17 @@ button {
   color: white;
   border: none;
   padding: 12px;
-  width: 100%;
+  width: 100px;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
 }
 button2 {
   background-color: #0048ff6a;
-  color: white;
+  color: red;
   border: none;
   padding: 12px;
   width: 100%;
-  border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
 }
