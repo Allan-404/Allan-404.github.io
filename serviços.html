@@ -25,7 +25,7 @@
                 function adicionarProduto() {
                     const nomeInput = document.getElementById("nome");
                     const precoInput = document.getElementById("preco");
-                    const novoProd = {
+                    const novoProduto = {
                     nome: nomeInput.value,
                     preco: parseFloat(precoInput.value)
                 };
@@ -46,7 +46,7 @@
                 <input type="number" id="preco" name="preco" step="0.01">
                 <button type="submit">Adicionar Produto</button>
             </form>
-            <button onclick="mostrarProdutos(), limparLista()">Mostrar Produtos</button>
+            <button onclick="limparLista(), mostrarProdutos() ">Mostrar Produtos</button>
             <h2>Produtos</h2>
             <ul id="lista-produtos">
             </ul>
