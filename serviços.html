@@ -1,17 +1,32 @@
 <!DOCTYPE html>
-    <html>
-        <header>
-            <title>Serviços</title>
-            <link href="style.css" rel="stylesheet" type="text/css" />
-        </header>
-            <body>
-                <center>
-    
-                    <h1>Serviços</h1>
-    
-                </center>
+<html>
+    <head>
+        <title>Meu Site</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <script>
+            let produtos = [
+                { nome: "Produto 1", preco: 10.99 },
+                { nome: "Produto 2", preco: 19.99 },
+                { nome: "Produto 3", preco: 5.99 }
+            ];
+            function mostrarProdutos() {
+                const listaProdutos = document.getElementById("lista-produtos");
+                produtos.forEach(produto => {
+                    const item = document.createElement("li");
+                    item.textContent = `${produto.nome} - R$ ${produto.preco.toFixed(2)}`;
+                    listaProdutos.appendChild(item);
+                });
+            }
 
-            <button onclick="window.location.href='index.html'">Voltar</button>
-
-            </body>
-    </html>
+        </script>
+    </head>
+    <body>
+        <h1>Bem-vindo ao meu site</h1>
+        <p>Este é um exemplo simples de um site com três produtos.</p>
+        <button onclick="mostrarProdutos()">Mostrar Produtos</button>
+        <h2>Produtos</h2>
+        <ul id="lista-produtos">
+        </ul>
+        <button onclick="window.location.href='index.html'">Voltar</button>
+    </body>
+</html>
