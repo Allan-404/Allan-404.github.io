@@ -11,9 +11,7 @@
             <script>
                 let produtos = [
                     { nome: "Produto 1", preco: 10.99 },
-                    { nome: "Produto 2", preco: 19.99 },
-                    { nome: "Produto 3", preco: 5.99 }
-                ];
+                    ];
                 function mostrarProdutos() { 
                     listaProdutos.innerHTML = "";
                     const listaProdutos = document.getElementById("lista-produtos");
@@ -23,7 +21,7 @@
                         listaProdutos.appendChild(item);
                     });
                 }
-                function adicionarProduto() {
+                function adicionarProduto(produto,preco) {
                     const nomeInput = document.getElementById("nome");
                     const precoInput = document.getElementById("preco");
                     const novoProduto = {nome:nome preco:preco};
@@ -32,8 +30,6 @@
                     precoInput.value = "";
                 }
             </script>
-        </head>
-        <body>
             <form onsubmit="event.preventDefault(); adicionarProduto(); limparCadastro()">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome">
@@ -41,7 +37,7 @@
                 <input type="number" id="preco" name="preco" step="0.01">
                 <button type="submit">Adicionar Produto</button>
             </form>
-            <button onclick="limparLista(), mostrarProdutos() ">Mostrar Produtos</button>
+            <button onclick="mostrarProdutos() ">Mostrar Produtos</button>
             <h2>Produtos</h2>
             <ul id="lista-produtos">
             </ul>
