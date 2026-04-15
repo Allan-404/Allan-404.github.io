@@ -1,0 +1,17 @@
+
+<body>
+        <h1>Bem-vindo ao meu site</h1>
+        <p>Este é um exemplo simples de um site para gerencia produtos</p>
+        <form onsubmit="event.preventDefault(); adicionarProduto();">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+            <label for="preco">Preço:</label>
+            <input type="number" id="preco" name="preco" step="0.01">
+            <button type="submit">Adicionar Produto</button>
+        </form>
+
+        <button onclick="mostrarProdutos()">Mostrar Produtos</button>
+        <h2>Produtos</h2>
+        <ul id="lista-produtos">
+        </ul>
+    </body>
