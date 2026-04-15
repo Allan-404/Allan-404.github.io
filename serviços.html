@@ -29,17 +29,17 @@
                     nome: nomeInput.value,
                     preco: parseFloat(precoInput.value)
                 };
-                LimparLista(){
+                limparLista(){
                     listaProdutos.innerHTML = "";
                 }
-                LimparCadastro(){
+                limparCadastro(){
                     nomeInput.value = "";
                     precoInput.value = "";
                 }
             </script>
         </head>
         <body>
-            <form onsubmit="event.preventDefault(); adicionarProduto();">
+            <form onsubmit="event.preventDefault(); adicionarProduto(); limparCadastro()">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome">
                 <label for="preco">Preço:</label>
